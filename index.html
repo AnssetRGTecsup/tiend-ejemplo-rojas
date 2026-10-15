@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Línea</title>
+    <link rel="stylesheet" href="estiloss.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>🛒 Mi Tienda</h1>
+        </div>
+        
+        <!-- BARRA DE BÚSQUEDA -->
+        <div class="search-container">
+            <input type="text" id="input-busqueda" placeholder="Buscar producto...">
+        </div>
+
+        <div class="cart-icon" id="cart-icon">
+            <span>🛒 Carrito (<span id="cart-count">0</span>)</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- FILTROS POR CATEGORÍA -->
+        <section class="filters">
+            <button class="btn-filter active" data-category="todos">Todos</button>
+            <button class="btn-filter" data-category="tecnologia">Tecnología</button>
+            <button class="btn-filter" data-category="ropa">Ropa</button>
+            <button class="btn-filter" data-category="accesorios">Accesorios</button>
+        </section>
+
+        <!-- CATÁLOGO DE PRODUCTOS -->
+        <section class="products-grid" id="products-grid">
+            <!-- Los productos se cargan dinámicamente desde script.js -->
+        </section>
+
+        <!-- SECCIÓN Y DETALLE DEL CARRITO DE COMPRAS -->
+        <section class="cart-section" id="cart-section">
+            <h2>Tu Carrito de Compras</h2>
+            <ul id="cart-items" class="cart-items">
+                <!-- Elementos del carrito cargados dinámicamente -->
+            </ul>
+            <div class="cart-summary">
+                <p>Total: <strong>$<span id="cart-total">0.00</span></strong></p>
+                <div class="cart-actions">
+                    <button id="btn-vaciar" class="btn-secondary">Vaciar Carrito</button>
+                    <button id="btn-comprar" class="btn-primary">Finalizar Compra</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- NOTIFICACIÓN TOAST -->
+    <div id="toast" class="toast hidden">Producto añadido al carrito</div>
+
+    <footer>
+        <p>&copy; 2026 Mi Tienda. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
